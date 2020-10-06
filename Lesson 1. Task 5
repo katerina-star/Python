@@ -1,0 +1,10 @@
+income = int(input('Введите вашу выручку: '))
+costs = int(input('Введите ваши затраты: '))
+result = income - costs
+print(f'Ваш финансовый результат: {result}')
+if result > 0:
+    result = result / income
+    print(f'Ваша рентабельность: {result}')
+    unit_profit = int(input('Введите количество ваших сотрудников: '))
+    unit_profit = (income - costs) / unit_profit
+    print (f'Прибыль на одного сотрудника: {unit_profit:.3f}')
