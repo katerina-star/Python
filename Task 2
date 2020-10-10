@@ -1,0 +1,22 @@
+str = input('Введите элементы в список: ')
+print(str)
+list = str.split()
+print(list)
+i = 0
+for i in range(len(list) > 0):
+    list[i], list[i + 1] = list[i + 1], list[i]
+    if len(list) > 3:
+        i += 2
+        list[i], list[i + 1] = list[i + 1], list[i]
+        if len(list) > 5:
+            i += 2
+            list[i], list[i + 1] = list[i + 1], list[i]
+            if len(list) > 7:
+                i += 2
+                list[i], list[i + 1] = list[i + 1], list[i]
+                if len(list) > 9:
+                    i += 2
+                    list[i], list[i + 1] = list[i + 1], list[i]
+                if len(list) > 10:
+                    print('Введите не более 9 элементов')
+print(list)
