@@ -1,0 +1,4 @@
+words = input('Введите слова: ')
+list = words.split()
+for ind, el in enumerate(list):
+    print(ind, el[:10])
