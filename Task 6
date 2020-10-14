@@ -1,0 +1,13 @@
+def int_func():
+    a = input('Введите слово, состоящее из маленьких латинских букв: ').lower()
+    a = a.title()
+    return a
+
+print(int_func())
+
+def int_func_new():
+    a = input('Введите слова через пробел из маленьких латинских букв: ').lower()
+    a = a.title()
+    return a
+
+print(int_func_new())

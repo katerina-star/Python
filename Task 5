@@ -1,0 +1,41 @@
+def func_sum():
+    b = input('Введите числа через пробел: ')
+    a = [int(i) for i in b.split()]
+    global result
+    result = sum(a)
+    if i == 2:
+        if new_result > 0:
+            global e
+            e = d + result
+            return d, e
+    else:
+        return result
+
+
+def func_result():
+    b = input('Введите числа через пробел: ')
+    c = [int(i) for i in b.split()]
+    global new_result
+    new_result = sum(c)
+    global d
+    if i == 2:
+        if e > 0:
+            global d
+            d = new_result + e
+            return e, d
+    else:
+        d = new_result + result
+        return result, d
+
+
+i = 1
+while True:
+    if input('Для выхода введите "Q", для продолжения "Enter"').upper() == 'Q':
+        break
+    if i == 1:
+        print(func_sum())
+        print(func_result())
+        i += 1
+    else:
+        print(func_sum())
+        print(func_result())
