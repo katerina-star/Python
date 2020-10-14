@@ -1,0 +1,8 @@
+def func_inf(**kwargs):
+    return kwargs
+
+
+print(func_inf(имя=input('Введите имя: '), фамилия=input('Введите фамилию: '), год=input(
+    'Введите год рождения: '), город=input('Введите город проживания: '), email=input(
+    'Введите email: '), телефон=input('Введите телефон: ')
+               ))
