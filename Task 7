@@ -1,0 +1,12 @@
+def func_fact():
+    n = int(input('Введите число: '))
+    factorial = 1
+    for i in range(2, n + 1):
+        factorial *= i
+
+    yield factorial
+
+
+print(func_fact())
+for i in func_fact():
+    print(i)
