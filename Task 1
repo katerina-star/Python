@@ -1,0 +1,6 @@
+with open('new.txt', 'w', encoding='utf-8') as moon:
+    while True:
+        s = input('Введите строку: ')
+        if s == '':
+            break
+        moon.write(s + '\n')
