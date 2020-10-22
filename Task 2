@@ -1,0 +1,5 @@
+with open('text1.txt', 'r', encoding='utf-8') as f_object:
+    line = f_object.readlines()
+    for ind, value in enumerate(line, 1):
+        words = len(value.split())
+        print(f'Cтрока: {ind}, количество слов: {words}')

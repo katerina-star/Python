@@ -1,0 +1,7 @@
+dict = {}
+with open('text_6.txt', 'r', encoding='utf-8') as file:
+    for line in file:
+        name, data = line.split(':')
+        name_total = sum(map(int, ''.join([el for el in data if el == ' ' or (el >= '0' and el <= '9')]).split()))
+        dict[name] = name_total
+    print(f'{dict}')

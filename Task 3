@@ -1,0 +1,5 @@
+with open('text_3.txt', 'r', encoding='utf-8') as file:
+    dict = {line.split()[0]: float(line.split()[1]) for line in file.readlines()}
+    average_salary = sum(dict.values()) / len(dict)
+    names = [element[0] for element in dict.items() if element[1] < 20000]
+    print(f'Средняя зарплата: {average_salary}, Фамилии с зарплатой ниже 20000: {names}')
