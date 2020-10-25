@@ -1,0 +1,12 @@
+class Road:
+    _lenght = 20
+    _width = 5000
+
+    def mass(self):
+        self._mass = 25
+        self._cm = 5
+        print(f'{(self._lenght * self._width * self._mass * self._cm) / 1000}т')
+
+
+r = Road()
+print(r.mass())

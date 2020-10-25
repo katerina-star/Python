@@ -1,0 +1,24 @@
+class Worker:
+    name = input('Введите имя: ')
+    surname = input('Введите фамилию: ')
+    dict = {'wage': '', 'bonus': ''}
+    for f in dict.keys():
+        dict[f] = int(input(f'Ввндите значение "{f}": '))
+    position = 'position'
+    _income = dict
+
+
+class Position(Worker):
+
+    def get_full_name(self):
+        return f'Имя: {super().name}, фамилия: {super().surname}'
+
+    def get_total_income(self):
+        for key, value in super()._income.items():
+            total_income = sum(super().dict.values())
+            return total_income
+
+
+p = Position()
+print(p.get_full_name())
+print(f'Доход: {p.get_total_income()}')

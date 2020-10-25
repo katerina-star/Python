@@ -1,0 +1,37 @@
+class Stationary:
+    title = 'Кагцелярская принадлежность'
+
+    def draw(self):
+        return 'Запуск отрисовки'
+
+
+class Pen(Stationary):
+
+    def draw(self):
+        super().draw()
+        title = 'Ручка'
+        return f'{title}: Пишем ручкой'
+
+
+class Pencil(Stationary):
+
+    def draw(self):
+        super().draw()
+        title = 'Карандаш'
+        return f'{title}: Рисуем карандашом'
+
+
+class Handle(Stationary):
+
+    def draw(self):
+        super().draw()
+        title = 'Маркер'
+        return f'{title}: Выделяем маркером'
+
+
+p = Pen()
+print(p.draw())
+pe = Pencil()
+print(pe.draw())
+h = Handle()
+print(h.draw())
