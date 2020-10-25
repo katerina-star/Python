@@ -1,0 +1,120 @@
+class Car:
+    def __init__(self, speed, color, name, is_police):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = is_police
+
+    def go(self):
+        return 'Машина поехала'
+
+    def stop(self):
+        return 'Машина остановилась'
+
+    def turn(self, direction):
+        self.direction = direction
+        return f'Машина повернула {direction}'
+
+    def show_speed(self, show_speed):
+        self.show_speed = show_speed
+        if show_speed > 60:
+            print('Вы превысили скорость!')
+        return show_speed
+
+
+class TownCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+        print(f'Скорость: {speed}, цвет: {color}, имя: {name}, полицкйская машина: {is_police}')
+        return
+
+    def go(self):
+        return super().go()
+
+    def stop(self):
+        return super().stop()
+
+    def turn(self, direction):
+        return super().turn(direction)
+
+    def show_speed(self, show_speed):
+        return super().show_speed(show_speed)
+
+
+class SportCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+        print(f'Скорость: {speed}, цвет: {color}, имя: {name}, полицкйская машина: {is_police}')
+        return
+
+    def go(self):
+        return super().go()
+
+    def stop(self):
+        return super().stop()
+
+    def turn(self, direction):
+        return super().turn(direction)
+
+
+class WorkCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+        print(f'Скорость: {speed}, цвет: {color}, имя: {name}, полицкйская машина: {is_police}')
+        return
+
+    def go(self):
+        return super().go()
+
+    def stop(self):
+        return super().stop()
+
+    def turn(self, direction):
+        return super().turn(direction)
+
+    def show_speed(self, show_speed):
+        if show_speed > 40:
+            print('Вы превысили скорость!')
+        return show_speed
+
+
+class PoliceCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+        print(f'Скорость: {speed}, цвет: {color}, имя: {name}, полицкйская машина: {is_police}')
+        return
+
+    def go(self):
+        return super().go()
+
+    def stop(self):
+        return super().stop()
+
+    def turn(self, direction):
+        return super().turn(direction)
+
+
+t = TownCar(57, 'красный', 'Mazda', False)
+print(t.show_speed(65))
+print(t.go())
+print(t.turn('налево'))
+print(t.stop())
+print()
+
+s = SportCar(110, 'желтый', 'Lamborghini', False)
+print(s.go())
+print(s.turn('направо'))
+print(s.stop())
+print()
+
+w = WorkCar(50, 'серый', 'Honda', False)
+print(w.show_speed(48))
+print(w.go())
+print(w.turn('налево'))
+print(w.stop())
+print()
+
+p = PoliceCar(75, 'синий', 'Audi', True)
+print(p.go())
+print(p.turn('направо'))
+print(p.stop())
