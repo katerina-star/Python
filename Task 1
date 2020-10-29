@@ -1,0 +1,24 @@
+class Matrix:
+
+    def __init__(self, matrix):
+        self.matrix = matrix
+
+    def __str__(self):
+        return '\n'.join([''.join(['%d\t' % i for i in row]) for row in self.matrix])
+
+    def __add__(self, other):
+        return Matrix(list(map(lambda x, y: list(map(lambda z, w: z + w, x, y)), self.matrix, other.matrix)))
+
+    def size(self):
+        row = len(self.matrix)
+        cols = 0
+        for row in self.matrix:
+            if len(row) > cols:
+                cols = len(row)
+
+        return (row, cols)
+
+
+matrix_1 = Matrix([[1, 2], [3, 4], [5, 6]])
+matrix_2 = Matrix([[7, 8], [9, 10], [11, 12]])
+print(matrix_1 + matrix_2)
