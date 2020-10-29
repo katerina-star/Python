@@ -1,0 +1,40 @@
+class Cell:
+    def __init__(self, cell):
+        self.cell = int(cell)
+
+    def __str__(self):
+        return f'Результат: {self.cell * "*"}'
+
+    def __add__(self, other):
+        return self.cell + other.cell
+
+    def __sub__(self, other):
+        if self.cell - other.cell > 0:
+            return self.cell - other.cell
+        else:
+            return f'Вычитание невозможно. Отрицательное число.'
+
+    def __mul__(self, other):
+        return self.cell * other.cell
+
+    def __truediv__(self, other):
+        return f'{self.cell / other.cell:.2f}'
+
+    def make_order(self, rows):
+        row = ''
+        rows = int(rows)
+        for i in range(int(self.cell / rows)):
+            row += f'{"*" * rows} \n'
+        last_row = f'{"*" * (self.cell % rows)}'
+        return f'{row} {last_row}'
+
+
+cell_1 = Cell(12)
+cell_2 = Cell(33)
+print(cell_1 + cell_2)
+print(cell_1 - cell_2)
+print(cell_1 * cell_2)
+print(cell_1 / cell_2)
+print(cell_2.make_order(5))
+print()
+print(cell_1.make_order(4))

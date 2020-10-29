@@ -1,0 +1,45 @@
+from abc import ABC, abstractmethod
+
+
+class Clothes(ABC):
+
+    @abstractmethod
+    def size(self):
+        pass
+
+    @abstractmethod
+    def height(self):
+        pass
+
+
+class Coat(Clothes):
+    def __init__(self, V):
+        self.V = V
+
+    @property
+    def size(self):
+        size = (self.V / 6.5 + 0.5)
+        return f'Пальто: {size:.2f}'
+
+    def height(self):
+        pass
+
+
+class Costume(Clothes):
+
+    def __init__(self, H):
+        self.H = H
+
+    @property
+    def height(self):
+        height = (self.H * 2 + 0.3)
+        return f'Костюм: {height}'
+
+    def size(self):
+        pass
+
+c = Coat(15)
+k = Costume(18)
+
+print(c.size)
+print(k.height)
