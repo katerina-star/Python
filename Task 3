@@ -1,0 +1,24 @@
+class Error:
+
+    def __init__(self, *args):
+        self.my_list = []
+
+    def numbers(self):
+        while True:
+            try:
+                num = int(input('Введите число: '))
+                self.my_list.append(num)
+                print(f'Текущий список - {self.my_list} \n')
+            except:
+                print('Введенное значение не число')
+                attempt = input('Хотите попробовать ввести число еще раз? y - да, N - нет')
+                if attempt == 'Y' or attempt == 'y':
+                    print(e.numbers())
+                elif attempt == 'N' or attempt == 'n':
+                    return 'Вы вышли'
+                else:
+                    return 'Вы вышли'
+
+
+e = Error(1)
+print(e.numbers())
